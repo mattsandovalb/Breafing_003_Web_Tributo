@@ -1,0 +1,290 @@
+
+
+/***********************************BODY***********************************/
+body{
+    font-family: 'Inter'  , sans-serif;
+    margin: 0;
+}
+
+
+/*************************************HEAD**********************************/
+.header_head{
+    top: 0;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+/*************************************LOGO**********************************/
+.div_logo{
+    display: flex;
+    width: 20%;
+    height: 100%;
+   
+}
+.logo{
+   
+
+}
+
+
+/*************************************NAVBAR*******************************/
+.nav_bar_div{
+    display: flex;
+    width: 60%;
+    height: 100%;
+    align-items: end;
+    justify-content: center;
+    background-color: white;
+    z-index: 3;
+}
+.nav_bar{
+    width: 60%;
+    text-align: center;
+}
+.navbar_list{
+    
+}
+.li_nav{
+    display: inline;
+}
+.li_nav a{
+    text-decoration: none;
+    color: black;   
+}
+
+.li_nav:nth-last-child(1) :focus{
+    border-bottom: 3px solid #40731E;
+}
+.li_nav:nth-last-child(2) :focus{
+    border-bottom: 3px solid #40731E;
+}
+.li_nav:nth-last-child(3) :focus{
+    border-bottom: 3px solid #40731E;
+}
+
+.nav_bar_line{
+    width: 100%;
+    background-color: blueviolet;
+    height: 2px;
+}
+
+
+/************************************PROFILE*********************************/
+.div_profile{
+    width: 20%;
+    height: 100%;
+    position: relative;
+}
+.profile_img{
+
+    width: 15%;
+    border-radius: 50%;
+    align-items: center;
+}
+.profile_name{
+
+}
+
+
+/*************************************FIRST PAGE*******************************/
+
+/**********************************ASIDE SECTION*******************************/
+#general_first_section_page{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10%;
+}
+.aside_section{
+    width: 20%;
+    height: 100%;
+}
+.img_aside{
+    width: 50%;
+    height: 40%;
+    border-radius: 30px;
+} 
+
+
+/*****************************MIDDLE SECTION*****************************/
+.principal_section{
+    width: 60%;
+    height: 100%;
+}
+.background_img{
+    width: 40%;
+    justify-content: center;
+}
+
+
+/********************************NEWS SECTION*******************************/
+.news_section{
+    width: 20%;
+    height: 100%;
+    background-color: #946D56 ;
+    border-radius: 25px;
+}
+
+
+/*************************GENERAL SECOND PAGE*****************************/
+#second_section{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+}
+.general_content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*************************************CATS*******************************/
+.cats_section_title{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 60px ;
+    font-family: 'Inter'  , sans-serif;
+}
+.line_cats{
+    width: 60%;
+    height: 1px;
+    background-color: #000; 
+}
+.cats_photo_section{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50%;
+}
+.cat_photo{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    height: 100%;
+    align-items: center;
+}
+.cat_photo img{
+    display: flex;
+    border-radius: 15%;
+    width: 300px;
+    height: 300px;
+    
+}
+
+.cat_photo button{
+    width: 30%;
+    height: 100%;
+
+}
+
+/************HOVER CATS IMAGE***************/
+
+.cat_photo img:hover{
+    transform: scale(1.2);
+    
+}
+
+.cat_photo h3{
+    width: 33%;
+    height: 100px;
+    position: end;
+    display: block;
+    left: 15%;    
+    bottom: 40%;
+    font-family: 'Inter'  , sans-serif;
+    font-size: 350%;
+    font-weight: 600;
+    color: black;
+    z-index: 2;
+    
+}
+
+
+
+/*************************************DOGS*******************************/
+.dogs_section_title{
+    margin-top: 5%;
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    font-size: 60px ;
+    font-family: 'Inter'  , sans-serif;
+}
+.line_dogs{
+    width: 60%;
+    height: 1px;
+    background-color: #000;
+}
+.dogs_photo_section{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50%;
+}
+.dog_photo{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    height: 100%;
+    align-items: center;
+}
+.dog_photo img{
+    display: flex;
+    position: relative;
+    border-radius: 15%;
+    width: 300px;
+    height: 300px;
+}
+.dog_photo button{
+    width: 30%;
+    height: 1000%;
+}
+
+
+/************HOVER DOGS IMAGE***************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer_section{
+    width: 100%;
+    height: 30%;
+}
