@@ -1,9 +1,13 @@
+html{
+    scroll-behavior: smooth;
+}
 
 
 /***********************************BODY***********************************/
 body{
     font-family: 'Inter'  , sans-serif;
     margin: 0;
+    
 }
 
 
@@ -16,19 +20,20 @@ body{
     height: 10vh;
     display: flex;
     flex-direction: row;
-    
+    box-shadow: 50px 0px 20px #cfcfcf;
+    z-index: 1;
 }
+
 
 /*************************************LOGO**********************************/
 .div_logo{
     display: flex;
     width: 20%;
     height: 100%;
-   
+    justify-content: center;
 }
 .logo{
-   
-
+    height: 130%;
 }
 
 
@@ -37,7 +42,7 @@ body{
     display: flex;
     width: 60%;
     height: 100%;
-    align-items: end;
+    align-items: center;
     justify-content: center;
     background-color: white;
     z-index: 3;
@@ -47,16 +52,19 @@ body{
     text-align: center;
 }
 .navbar_list{
-    
+    width: 100%;
 }
 .li_nav{
     display: inline;
 }
 .li_nav a{
     text-decoration: none;
-    color: black;   
+    color: black;
+    margin-right: 50px;
+    margin-left: 50px;
+    font-family: 'Inter'  , sans-serif;
 }
-
+            /*Border Bottom focus Nav */
 .li_nav:nth-last-child(1) :focus{
     border-bottom: 3px solid #40731E;
 }
@@ -66,7 +74,6 @@ body{
 .li_nav:nth-last-child(3) :focus{
     border-bottom: 3px solid #40731E;
 }
-
 .nav_bar_line{
     width: 100%;
     background-color: blueviolet;
@@ -78,57 +85,158 @@ body{
 .div_profile{
     width: 20%;
     height: 100%;
-    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 .profile_img{
-
     width: 15%;
     border-radius: 50%;
     align-items: center;
 }
 .profile_name{
-
+    margin-left: 5%;
+    width: 50%;
+    font-family: 'Inter'  , sans-serif;
 }
 
 
-/*************************************FIRST PAGE*******************************/
-
-/**********************************ASIDE SECTION*******************************/
+/*******************************GENERAL FIRST PAGE*******************************/
 #general_first_section_page{
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     flex-direction: row;
-    margin-top: 10%;
+    margin-top: 7%;
 }
+
+
+/**********************************ASIDE SECTION*******************************/
 .aside_section{
+    margin-top: 2%;
     width: 20%;
-    height: 100%;
+    height: 85%;
+}
+.adoptme_section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 33%;
+    justify-content: center;
+    align-items: center;
 }
 .img_aside{
-    width: 50%;
-    height: 40%;
+    width: 200px;
+    height: 200px;
     border-radius: 30px;
-} 
+    z-index: 1;
+}
+.adoptme_section button{
+    width: 7%;
+    height: 3%;
+    position: absolute;
+    background-color: #A8A4E0;
+    border: none;
+    border-radius: 25px;
+    opacity: 0.5;
+    transition: all 300ms;
+    z-index: 2;
+}
+.adoptme_section a{
+    text-decoration: none;
+    color: white;
+}
+.adoptme_section:hover button{
+    opacity: 1;
+    
+}
+.img_aside:hover{
+    filter: blur(4px);
+}
 
 
 /*****************************MIDDLE SECTION*****************************/
 .principal_section{
+    display: flex;
+    flex-direction: column;
     width: 60%;
     height: 100%;
+    align-items: center;
+}
+.head_firstpage{
+    font-family: 'Inter'  , sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
 }
 .background_img{
+    margin-top: 5%;
+    width: 30%;
+}
+.text_firstpage{
+    margin-top: 2%;
+    text-align: center;
+    width: 60%;
+    height: 7%;
+    font-family: 'Inter'  , sans-serif;
+}
+.button_firstpage{
     width: 40%;
-    justify-content: center;
+    height: 7%;
+    background-color: #99E08D ;
+    border: none;
+    border-radius: 25px;
+}
+.button_firstpage a{
+    text-decoration: none;
+    font-family: 'Inter'  , sans-serif;
+    color: #000;
+    font-weight: 400;
+    font-size: 35px;
+}
+.button_firstpage:hover{
+    transform: scale(1.1);
+    background-color: #83c078 ;
+    box-shadow: 4px 4px 4px grey;
 }
 
 
 /********************************NEWS SECTION*******************************/
 .news_section{
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
     width: 20%;
-    height: 100%;
-    background-color: #946D56 ;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+}
+.news_div{
+    background-color: #E09E77 ;
     border-radius: 25px;
+    width: 85%;
+    height: 80%;
+    border: 1px solid black;
+}
+.title_news{
+    font-weight: bold;
+    margin-top: 10%;
+    margin-left: 5%;
+    font-family: 'Inter'  , sans-serif;
+    font-size: 20px;
+}
+.div_news{
+    margin-top:10% ;
+    margin-left: 5%;
+    width: 90%;
+    height: 40%;
+}
+.div_news h5{
+    font-family: 'Inter'  , sans-serif;
+    padding-bottom: 5%;
+    font-weight: bold;
+}
+.div_news p{
+    font-family: 'Inter'  , sans-serif;
 }
 
 
@@ -139,29 +247,32 @@ body{
     width: 100%;
     height: 100vh;
     max-height: 100vh;
+    
 }
 .general_content{
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
 /*************************************CATS*******************************/
-.cats_section_title{
+.cats_title{
     width: 100%;
     height: 100%;
     text-align: center;
     font-size: 60px ;
-    font-family: 'Inter'  , sans-serif;
+    font-family: 'Inter'  , sans-serif
 }
 .line_cats{
     width: 60%;
     height: 1px;
     background-color: #000; 
 }
-.cats_photo_section{
+.cats_section{
     margin-top: 5%;
     display: flex;
     flex-direction: row;
@@ -174,50 +285,62 @@ body{
     width: 33%;
     height: 100%;
     align-items: center;
+    position: relative;
 }
 .cat_photo img{
     display: flex;
     border-radius: 15%;
     width: 300px;
     height: 300px;
-    
 }
-
+.cat_photo a{
+    text-decoration: none;
+    color: #000;
+    font-family: 'Inter'  , sans-serif;
+}
 .cat_photo button{
+    border: none;
+    border-radius: 25px;
+    background-color: #99E08D;
+    margin-top: 10%;
     width: 30%;
-    height: 100%;
-
+    height: 50px;
+    box-shadow: 4px 4px 4px grey;
 }
-
-/************HOVER CATS IMAGE***************/
-
-.cat_photo img:hover{
-    transform: scale(1.2);
-    
-}
-
 .cat_photo h3{
+    position: absolute;
     width: 33%;
     height: 100px;
-    position: end;
-    display: block;
-    left: 15%;    
-    bottom: 40%;
     font-family: 'Inter'  , sans-serif;
     font-size: 350%;
     font-weight: 600;
-    color: black;
-    z-index: 2;
-    
+    color: white;
+    text-align: center;
+    top: 60%;
+    transform: scale(0);
 }
+/************HOVER CATS IMAGE***************/
+.cat_photo:hover img{
+    transform: scale(1.2);
+    transition: all 300ms;
+}
+.cat_photo:hover h3{
+    transform: scale(1);
+    transition: all 500ms;
+}
+.cat_photo:hover button{
+    background-color: #83c078 ;
+    box-shadow: 4px 4px 4px rgb(58, 58, 58);
+}
+/*******************************************/
 
 
 
 /*************************************DOGS*******************************/
-.dogs_section_title{
+.dogs_title{
     margin-top: 5%;
     width: 100%;
-    height: 50%;
+    height:100%;
     text-align: center;
     font-size: 60px ;
     font-family: 'Inter'  , sans-serif;
@@ -227,12 +350,13 @@ body{
     height: 1px;
     background-color: #000;
 }
-.dogs_photo_section{
+.dogs_section{
+    position: relative;
     margin-top: 5%;
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 50%;
+    height: 100%;
 }
 .dog_photo{
     display: flex;
@@ -248,43 +372,354 @@ body{
     width: 300px;
     height: 300px;
 }
+.dog_photo a{
+    text-decoration: none;
+    color: #000;
+    font-family: 'Inter'  , sans-serif;
+    
+}
 .dog_photo button{
+    border: none;
+    border-radius: 25px;
+    background-color: #99E08D;
+    margin-top: 10%;
     width: 30%;
-    height: 1000%;
+    height: 50px;
+    box-shadow: 4px 4px 4px grey;
+}
+.dog_photo h3{
+    position: absolute;
+    width: 33%;
+    height: 100px;
+    font-family: 'Inter'  , sans-serif;
+    font-size: 350%;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    top: 60%;
+    transform: scale(0);
+}
+/************HOVER DOGS IMAGE***************/
+.dog_photo:hover img{
+    transform: scale(1.2);
+    transition: all 300ms;
+}
+.dog_photo:hover h3{
+    transform: scale(1);
+    transition: all 500ms;
+}
+.dog_photo:hover button{
+    background-color: #83c078 ;
+    box-shadow: 4px 4px 4px rgb(58, 58, 58);
+}
+/*******************************************/
+
+
+
+/****************************CONTACT SECTION*************************/
+.contact_section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.div_contact{
+    margin-top: 5%;
+    width: 100%;
+    height: 100%;
+}
+.contact_title{
+    margin-top: 5%;
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    font-size: 60px ;
+    font-family: 'Inter'  , sans-serif;
+}
+.contact_line{
+    width: 60%;
+    height: 1px;
+    background-color: #000;
+}
+.div_contact p{
+    text-align: center;
+    font-family: 'Inter'  , sans-serif;
 }
 
 
-/************HOVER DOGS IMAGE***************/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.footer_section{
+/**********************************FORM*********************************/
+.div_form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+.form_container{
     width: 100%;
-    height: 30%;
+    height: 100%;
+    margin-top: 6%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section_form{
+    display: flex;
+    flex-direction: row;
+    
+}
+.section_form input{
+    width: 200%;
+    height: 30px;
+    margin-bottom: 5%;
+    border-radius: 25px;
+    margin-right: 5%;
+}
+.section_three{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section_three input{
+    width: 190%;
+    height: 30px;
+    border-radius: 25px;
+    margin-right: 5%;
+}
+.message{
+    margin-top: 10px;
+    height: 300px;
+}
+#submit{
+    margin-top: 5%;
+    width: 10%;
+    border-radius: 25px;
+}
+
+
+/*******************************DONATE SECTION*******************************/
+.donate_section{
+    margin-top: 5%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.div_donate{
+    width: 100%;
+    height: 100%;
+}
+.donate_title{
+    margin-top: 5%;
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    font-size: 60px ;
+    font-family: 'Inter'  , sans-serif;
+}
+.donate_line{
+    width: 60%;
+    height: 1px;
+    background-color: #000;
+}
+.div_text{
+}
+.div_text p{
+    font-family: 'Inter'  , sans-serif;
+    text-align: center;
+}
+.div_icons{
+    width: 100%;
+    height: 100%;
+    margin-top: 10%;
+    display: flex;
+    display: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.div_icons i{
+    display: flex;
+    flex-direction: row;
+    font-size: 50px;
+}
+
+
+
+
+
+/************************ADOPOT SECTIONS*********************/
+
+/********************GENERAL ADOPT SECTION******************/
+
+#general_animals_page{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    margin-top: 7%;
+}
+
+
+/****************ASIDE SECTION ADOPT************************/
+.aside_section_animals{
+    margin-top: 2%;
+    width: 20%;
+    height: 85%;
+}
+.adopt_me_aside_animals{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 33%;
+    justify-content: center;
+    align-items: center;
+}
+.img_animals{
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+    z-index: 1;
+}
+.adopt_me_aside_animals button{
+    width: 7%;
+    height: 3%;
+    position: absolute;
+    background-color: #A8A4E0;
+    border: none;
+    border-radius: 25px;
+    opacity: 0.5;
+    transition: all 300ms;
+    z-index: 2;
+}
+.adopt_me_aside_animals a{
+    text-decoration: none;
+    color: white;
+}
+.adopt_me_aside_animals button:hover{
+    opacity:1;
+}
+
+
+/***************MIDLE ADOPT SECTION*********************/
+
+.principal_section_animal{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+    align-items: center;
+}
+.principal_animal{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+    align-items: center;
+}
+.adopt_image{
+    border-radius: 5%;
+    margin-top: 5%;
+    width: 40%;
+}
+.button_animalspage{
+    margin-top: 5%;
+    width: 40%;
+    height: 7%;
+    background-color: #99E08D ;
+    border: none;
+    border-radius: 25px;
+}
+.button_animalspage a{
+    text-decoration: none;
+    font-family: 'Inter'  , sans-serif;
+    color: #000;
+    font-weight: 400;
+    font-size: 35px;
+}
+.button_animalspage:hover{
+    transform: scale(1.1);
+    background-color: #83c078 ;
+    box-shadow: 4px 4px 4px grey;
+}
+
+
+
+
+/****************************INFO ADOPT******************************/
+
+.info_section{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 100%;
+    margin-top: 10%;
+}
+.info_div{
+    margin-right: 20%;
+    justify-content: start;
+}
+.div_name{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Inter'  , sans-serif;
+}
+.div_age{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.description_div{
+    width: 100%;
+    height: 50%;
+}
+.description_div p{
+    text-align: start;
+    font-size: 20px;
+}
+.button_div{
+    width: 100%;
+    height: 100%;
+}
+.button_div button{
+margin-top: 20%;
+width: 60%;
+height: 10%;
+background-color: white;
+border-radius: 25px;
+}
+.info_div a{
+    text-decoration: none;
+    color: #000;
+    font-family: 'Inter'  , sans-serif;
+}
+
+
+/**********************************FOOTER*******************************/
+.footer_section{
+    margin-top: 5%;
+    box-shadow: -1px 0 10px grey;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+.div_footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+}
+.footer_icon{
+    font-size: 40px;
+}
+.div_footer p{
+    margin-left: 10px ;
+    font-family: 'Inter'  , sans-serif;
+    font-weight: 30px;
 }
